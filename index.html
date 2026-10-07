@@ -57,6 +57,7 @@ header{
   padding:80px 20px;
   text-align:center;
   color:white;
+
   background:
     linear-gradient(rgba(60,25,10,.55),rgba(60,25,10,.55)),
     url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80")
@@ -107,6 +108,50 @@ header{
   margin-bottom:35px;
 }
 
+
+/* ABOUT US */
+
+.about-us{
+  background:#fff0d5;
+}
+
+.about-content{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.about-content h2{
+  font-size:34px;
+  margin-bottom:18px;
+}
+
+.about-content p{
+  font-size:17px;
+  margin-bottom:15px;
+}
+
+.about-highlight{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.highlight{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+.highlight h3{
+  margin-bottom:8px;
+}
+
+
+/* PRODUCTS */
+
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -144,8 +189,11 @@ header{
   margin-top:10px;
 }
 
-.about{
-  background:#fff0d5;
+
+/* VISIT */
+
+.visit{
+  background:#fffaf4;
   text-align:center;
 }
 
@@ -160,15 +208,22 @@ header{
   background:white;
   padding:25px;
   border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
 }
 
 .info-box h3{
   margin-bottom:8px;
 }
 
+
+/* CONTACT */
+
 .contact{
   text-align:center;
 }
+
+
+/* FOOTER */
 
 footer{
   background:#32180d;
@@ -176,6 +231,9 @@ footer{
   text-align:center;
   padding:30px 20px;
 }
+
+
+/* MOBILE */
 
 @media(max-width:650px){
 
@@ -200,11 +258,17 @@ footer{
   .section{
     padding:45px 18px;
   }
+
+  .about-content h2{
+    font-size:29px;
+  }
+
 }
 </style>
 </head>
 
 <body>
+
 
 <header>
 
@@ -215,9 +279,15 @@ footer{
     </div>
 
     <div>
+
       <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
       <a href="#products">Products</a>
+
       <a href="#contact">Contact</a>
+
     </div>
 
   </div>
@@ -225,11 +295,15 @@ footer{
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero" id="home">
 
   <div class="hero-content">
 
-    <h1>Freshly Baked With Love</h1>
+    <h1>
+      Freshly Baked With Love
+    </h1>
 
     <p>
       Delicious bread, beautiful cakes and tasty meat pies,
@@ -245,7 +319,9 @@ footer{
       <a class="btn whatsapp"
          href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20place%20an%20order."
          target="_blank">
+
         Order on WhatsApp
+
       </a>
 
     </div>
@@ -255,11 +331,102 @@ footer{
 </section>
 
 
+<!-- ABOUT US -->
+
+<section class="about-us" id="about">
+
+  <div class="section">
+
+    <div class="about-content">
+
+      <h2>
+        About Grace Bakery
+      </h2>
+
+      <p>
+        At Grace Bakery, we believe every day deserves
+        something freshly baked and delicious.
+      </p>
+
+      <p>
+        From our soft and tasty bread to beautifully
+        decorated cakes and delicious meat pies,
+        we prepare our products with care so you can
+        enjoy great taste in every bite.
+      </p>
+
+      <p>
+        Whether you are celebrating a special occasion,
+        sharing a meal with family or simply craving
+        something delicious, Grace Bakery is ready
+        to serve you.
+      </p>
+
+
+      <div class="about-highlight">
+
+        <div class="highlight">
+
+          <h3>🍞 Fresh</h3>
+
+          <p>
+            Freshly prepared products made with care.
+          </p>
+
+        </div>
+
+
+        <div class="highlight">
+
+          <h3>❤️ Quality</h3>
+
+          <p>
+            We care about taste, quality and satisfaction.
+          </p>
+
+        </div>
+
+
+        <div class="highlight">
+
+          <h3>😊 Customer First</h3>
+
+          <p>
+            Your satisfaction is important to us.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="buttons">
+
+        <a class="btn whatsapp"
+           href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20place%20an%20order."
+           target="_blank">
+
+          Order With Us
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
 <section class="section" id="products">
 
   <h2 class="section-title">
     Our Products
   </h2>
+
 
   <div class="products">
 
@@ -272,7 +439,9 @@ footer{
 
       <div class="card-content">
 
-        <h3>Fresh Bread</h3>
+        <h3>
+          Fresh Bread
+        </h3>
 
         <p>
           Soft, fresh and delicious bread baked with care.
@@ -295,7 +464,9 @@ footer{
 
       <div class="card-content">
 
-        <h3>Beautiful Cakes</h3>
+        <h3>
+          Beautiful Cakes
+        </h3>
 
         <p>
           Cakes for birthdays, celebrations and special occasions.
@@ -318,7 +489,9 @@ footer{
 
       <div class="card-content">
 
-        <h3>Meat Pies</h3>
+        <h3>
+          Meat Pies
+        </h3>
 
         <p>
           Deliciously baked meat pies made fresh for you.
@@ -338,7 +511,9 @@ footer{
 </section>
 
 
-<section class="about">
+<!-- VISIT -->
+
+<section class="visit">
 
   <div class="section">
 
@@ -346,11 +521,14 @@ footer{
       Visit Our Bakery
     </h2>
 
+
     <div class="info">
 
       <div class="info-box">
 
-        <h3>📍 Location</h3>
+        <h3>
+          📍 Location
+        </h3>
 
         <p>
           Benin City, Nigeria
@@ -361,7 +539,9 @@ footer{
 
       <div class="info-box">
 
-        <h3>🕐 Opening Hours</h3>
+        <h3>
+          🕐 Opening Hours
+        </h3>
 
         <p>
           Monday - Saturday
@@ -376,7 +556,9 @@ footer{
 
       <div class="info-box">
 
-        <h3>📱 WhatsApp</h3>
+        <h3>
+          📱 WhatsApp
+        </h3>
 
         <p>
           +234 703 871 0310
@@ -391,6 +573,8 @@ footer{
 </section>
 
 
+<!-- CONTACT -->
+
 <section class="section contact" id="contact">
 
   <h2 class="section-title">
@@ -401,23 +585,31 @@ footer{
     Contact us today for fresh bread, cakes and meat pies.
   </p>
 
+
   <div class="buttons">
 
     <a class="btn whatsapp"
        href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20place%20an%20order."
        target="_blank">
+
       💬 Order on WhatsApp
+
     </a>
+
 
     <a class="btn"
        href="tel:+2347038710310">
+
       📞 Call Us
+
     </a>
 
   </div>
 
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -434,6 +626,7 @@ footer{
   </p>
 
 </footer>
+
 
 </body>
 </html>
