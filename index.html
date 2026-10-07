@@ -1,478 +1,645 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Grace Bakery | Freshly Baked With Love</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Grace Bakery offers fresh bread, beautiful cakes and delicious meat pies in Benin City, Nigeria. Order easily through WhatsApp.">
+
+<meta name="keywords"
+content="bakery in Benin City, bread, cakes, meat pies, Grace Bakery">
+
+<meta name="theme-color"
+content="#6f2d16">
+
+<title>
+Grace Bakery | Fresh Bread, Cakes & Meat Pies
+</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fffaf4;
-  color:#3b2115;
-  line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#fffaf4;
+color:#3b2115;
+line-height:1.6;
 }
 
 header{
-  background:#6f2d16;
-  color:white;
-  padding:18px 20px;
-  position:sticky;
-  top:0;
-  z-index:10;
+background:#6f2d16;
+color:white;
+padding:17px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 12px rgba(0,0,0,.15);
 }
 
 .nav{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+max-width:1150px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:bold;
+font-size:25px;
+font-weight:bold;
+white-space:nowrap;
+}
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:16px;
-  font-size:14px;
+color:white;
+text-decoration:none;
+margin:5px 8px;
+font-size:14px;
+font-weight:bold;
 }
 
-.hero{
-  min-height:520px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:80px 20px;
-  text-align:center;
-  color:white;
+.nav a:hover{
+text-decoration:underline;
+}
 
-  background:
-    linear-gradient(rgba(60,25,10,.55),rgba(60,25,10,.55)),
-    url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80")
-    center/cover;
+
+/* HERO */
+
+.hero{
+min-height:560px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:90px 20px;
+text-align:center;
+color:white;
+
+background:
+linear-gradient(
+rgba(45,18,8,.58),
+rgba(45,18,8,.58)
+),
+url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80")
+center/cover;
 }
 
 .hero-content{
-  max-width:750px;
+max-width:800px;
 }
 
 .hero h1{
-  font-size:50px;
-  margin-bottom:15px;
+font-size:52px;
+line-height:1.15;
+margin-bottom:20px;
 }
 
 .hero p{
-  font-size:19px;
+font-size:20px;
+max-width:700px;
+margin:auto;
 }
 
 .buttons{
-  margin-top:28px;
+margin-top:28px;
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 22px;
-  margin:6px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  background:#6f2d16;
-  color:white;
-  border:none;
-  cursor:pointer;
+display:inline-block;
+padding:13px 22px;
+margin:6px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+background:#6f2d16;
+color:white;
+border:none;
+cursor:pointer;
+transition:.25s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+opacity:.92;
 }
 
 .btn.whatsapp{
-  background:#168c45;
+background:#168c45;
 }
 
+
+/* GENERAL */
+
 .section{
-  max-width:1100px;
-  margin:auto;
-  padding:65px 20px;
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
 }
 
 .section-title{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:35px;
+text-align:center;
+font-size:34px;
+margin-bottom:38px;
 }
+
 
 /* ABOUT */
 
 .about-us{
-  background:#fff0d5;
+background:#fff0d5;
 }
 
 .about-content{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
+max-width:850px;
+margin:auto;
+text-align:center;
 }
 
 .about-content h2{
-  font-size:34px;
-  margin-bottom:18px;
+font-size:35px;
+margin-bottom:18px;
 }
 
 .about-content p{
-  font-size:17px;
-  margin-bottom:15px;
+font-size:17px;
+margin-bottom:15px;
 }
 
 .about-highlight{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:32px;
 }
 
 .highlight{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,.06);
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
+
+.highlight h3{
+margin-bottom:8px;
+}
+
 
 /* WHY */
 
 .why{
-  background:#fffaf4;
+background:#fffaf4;
 }
 
 .why-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
 }
 
 .why-card{
-  background:white;
-  padding:30px 22px;
-  text-align:center;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.07);
+background:white;
+padding:30px 22px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
 .why-icon{
-  font-size:45px;
-  margin-bottom:12px;
+font-size:45px;
+margin-bottom:12px;
 }
 
 .why-card h3{
-  margin-bottom:8px;
-  font-size:21px;
+margin-bottom:8px;
+font-size:21px;
 }
+
 
 /* PRODUCTS */
 
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
 
 .card{
-  background:white;
-  overflow:hidden;
-  text-align:center;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+background:white;
+overflow:hidden;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  display:block;
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
 }
 
 .card-content{
-  padding:25px 22px;
+padding:25px 22px;
 }
 
 .card h3{
-  font-size:22px;
-  margin-bottom:8px;
+font-size:22px;
+margin-bottom:8px;
 }
 
 .price{
-  color:#6f2d16;
-  font-size:20px;
-  font-weight:bold;
-  margin-top:10px;
+color:#6f2d16;
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
 }
 
 .product-order{
-  margin-top:15px;
-  display:inline-block;
-  padding:11px 18px;
-  background:#168c45;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
+margin-top:15px;
+display:inline-block;
+padding:11px 18px;
+background:#168c45;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
 }
+
 
 /* GALLERY */
 
 .gallery-section{
-  background:#fff0d5;
+background:#fff0d5;
 }
 
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
 }
 
 .gallery-item{
-  overflow:hidden;
-  border-radius:15px;
-  background:white;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
+overflow:hidden;
+border-radius:15px;
+background:white;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
 .gallery-item img{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  display:block;
-  transition:transform .3s ease;
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+transition:.3s;
 }
 
 .gallery-item img:hover{
-  transform:scale(1.05);
+transform:scale(1.05);
 }
+
 
 /* REVIEWS */
 
 .reviews{
-  background:#fffaf4;
+background:#fffaf4;
 }
 
 .review-intro{
-  text-align:center;
-  max-width:700px;
-  margin:-15px auto 35px;
-  font-size:16px;
+text-align:center;
+max-width:700px;
+margin:-15px auto 35px;
 }
 
 .review-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px;
 }
 
 .review-card{
-  background:white;
-  padding:30px 25px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,.07);
+background:white;
+padding:30px 25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
 .stars{
-  font-size:22px;
-  margin-bottom:15px;
+font-size:22px;
+margin-bottom:15px;
 }
 
 .review-card p{
-  font-style:italic;
-  margin-bottom:15px;
+font-style:italic;
+margin-bottom:15px;
 }
 
 .review-card h4{
-  color:#6f2d16;
+color:#6f2d16;
 }
 
-.review-button{
-  text-align:center;
-  margin-top:35px;
-}
 
 /* ORDER */
 
 .order-section{
-  background:#f8ead5;
+background:#f8ead5;
 }
 
 .order-form{
-  max-width:700px;
-  margin:auto;
-  background:white;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 6px 25px rgba(0,0,0,.08);
+max-width:700px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 6px 25px rgba(0,0,0,.08);
 }
 
 .form-group{
-  margin-bottom:20px;
+margin-bottom:20px;
 }
 
 .form-group label{
-  display:block;
-  font-weight:bold;
-  margin-bottom:7px;
+display:block;
+font-weight:bold;
+margin-bottom:7px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
-  width:100%;
-  padding:13px;
-  border:1px solid #ddd;
-  border-radius:8px;
-  font-size:16px;
-  font-family:inherit;
+width:100%;
+padding:13px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+font-family:inherit;
 }
 
 .form-group textarea{
-  min-height:120px;
-  resize:vertical;
+min-height:120px;
+resize:vertical;
 }
 
 .order-button{
-  width:100%;
-  padding:15px;
-  background:#168c45;
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
+width:100%;
+padding:15px;
+background:#168c45;
+color:white;
+border:none;
+border-radius:8px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
 }
+
+
+/* FAQ */
+
+.faq{
+background:#fff0d5;
+}
+
+.faq-list{
+max-width:800px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+margin-bottom:14px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+.faq-item summary{
+padding:18px 20px;
+font-weight:bold;
+cursor:pointer;
+list-style:none;
+}
+
+.faq-item summary::-webkit-details-marker{
+display:none;
+}
+
+.faq-item p{
+padding:0 20px 20px;
+}
+
 
 /* VISIT */
 
 .visit{
-  background:#fffaf4;
-  text-align:center;
+background:#fffaf4;
+text-align:center;
 }
 
 .info{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  text-align:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+text-align:center;
 }
 
 .info-box{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,.05);
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+.info-box h3{
+margin-bottom:8px;
 }
 
 .map-container{
-  margin-top:35px;
-  overflow:hidden;
-  border-radius:18px;
-  box-shadow:0 6px 25px rgba(0,0,0,.10);
+margin-top:35px;
+overflow:hidden;
+border-radius:18px;
+box-shadow:0 6px 25px rgba(0,0,0,.10);
 }
 
 .map-container iframe{
-  width:100%;
-  height:400px;
-  border:0;
-  display:block;
+width:100%;
+height:400px;
+border:0;
+display:block;
 }
+
 
 /* CONTACT */
 
 .contact{
-  text-align:center;
+text-align:center;
+background:white;
 }
+
 
 /* FOOTER */
 
 footer{
-  background:#32180d;
-  color:white;
-  text-align:center;
-  padding:30px 20px;
+background:#32180d;
+color:white;
+text-align:center;
+padding:35px 20px;
 }
+
+footer p{
+margin:5px;
+}
+
 
 /* FLOATING WHATSAPP */
 
 .floating-whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:60px;
-  height:60px;
-  background:#168c45;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:29px;
-  box-shadow:0 5px 18px rgba(0,0,0,.25);
-  z-index:999;
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#168c45;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:29px;
+box-shadow:0 5px 18px rgba(0,0,0,.25);
+z-index:999;
 }
+
+
+/* BACK TO TOP */
+
+.back-top{
+position:fixed;
+right:20px;
+bottom:90px;
+width:45px;
+height:45px;
+background:#6f2d16;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+z-index:999;
+}
+
 
 /* MOBILE */
 
-@media(max-width:650px){
+@media(max-width:750px){
 
-  .nav{
-    flex-direction:column;
-    gap:8px;
-  }
+header{
+padding:14px 12px;
+}
 
-  .nav a{
-    margin:0 5px;
-  }
+.nav{
+flex-direction:column;
+gap:8px;
+}
 
-  .hero h1{
-    font-size:36px;
-  }
+.logo{
+font-size:23px;
+}
 
-  .hero{
-    min-height:480px;
-    padding:60px 18px;
-  }
+.nav-links{
+line-height:1.4;
+}
 
-  .section{
-    padding:45px 18px;
-  }
+.nav a{
+margin:3px 5px;
+font-size:13px;
+}
 
-  .about-content h2{
-    font-size:29px;
-  }
+.hero{
+min-height:500px;
+padding:70px 18px;
+}
 
-  .order-form{
-    padding:22px;
-  }
+.hero h1{
+font-size:38px;
+}
 
-  .gallery-item img{
-    height:220px;
-  }
+.hero p{
+font-size:17px;
+}
 
-  .map-container iframe{
-    height:320px;
-  }
+.section{
+padding:50px 18px;
+}
+
+.section-title{
+font-size:29px;
+}
+
+.about-content h2{
+font-size:29px;
+}
+
+.gallery-item img{
+height:220px;
+}
+
+.map-container iframe{
+height:320px;
+}
+
+.order-form{
+padding:22px;
+}
+
+.floating-whatsapp{
+right:15px;
+bottom:15px;
+}
+
+.back-top{
+right:15px;
+bottom:85px;
+}
 
 }
+
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -482,7 +649,7 @@ footer{
 Grace Bakery
 </div>
 
-<div>
+<div class="nav-links">
 
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -491,6 +658,7 @@ Grace Bakery
 <a href="#gallery">Gallery</a>
 <a href="#reviews">Reviews</a>
 <a href="#order">Order</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 
 </div>
@@ -506,7 +674,9 @@ Grace Bakery
 
 <div class="hero-content">
 
-<h1>Freshly Baked With Love</h1>
+<h1>
+Freshly Baked With Love
+</h1>
 
 <p>
 Delicious bread, beautiful cakes and tasty meat pies,
@@ -524,7 +694,7 @@ class="btn whatsapp"
 href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20place%20an%20order."
 target="_blank">
 
-Order on WhatsApp
+💬 Order on WhatsApp
 
 </a>
 
@@ -543,7 +713,9 @@ Order on WhatsApp
 
 <div class="about-content">
 
-<h2>About Grace Bakery</h2>
+<h2>
+About Grace Bakery
+</h2>
 
 <p>
 At Grace Bakery, we believe every day deserves
@@ -618,7 +790,7 @@ Order With Us
 </section>
 
 
-<!-- WHY CHOOSE US -->
+<!-- WHY -->
 
 <section class="why" id="why">
 
@@ -634,7 +806,9 @@ Why Choose Us?
 
 <div class="why-icon">🍞</div>
 
-<h3>Fresh Every Day</h3>
+<h3>
+Fresh Every Day
+</h3>
 
 <p>
 We prepare our bakery products fresh
@@ -643,11 +817,14 @@ so you can enjoy great taste every time.
 
 </div>
 
+
 <div class="why-card">
 
 <div class="why-icon">⭐</div>
 
-<h3>Quality Ingredients</h3>
+<h3>
+Quality Ingredients
+</h3>
 
 <p>
 We care about the ingredients that go
@@ -656,11 +833,14 @@ into every product we make.
 
 </div>
 
+
 <div class="why-card">
 
 <div class="why-icon">🎂</div>
 
-<h3>Beautiful Cakes</h3>
+<h3>
+Beautiful Cakes
+</h3>
 
 <p>
 Special cakes designed to make your
@@ -669,11 +849,14 @@ celebrations even more memorable.
 
 </div>
 
+
 <div class="why-card">
 
 <div class="why-icon">❤️</div>
 
-<h3>Made With Care</h3>
+<h3>
+Made With Care
+</h3>
 
 <p>
 Every order receives the care and attention
@@ -708,7 +891,9 @@ alt="Freshly baked bread">
 
 <div class="card-content">
 
-<h3>Fresh Bread</h3>
+<h3>
+Fresh Bread
+</h3>
 
 <p>
 Soft, fresh and delicious bread baked with care.
@@ -740,7 +925,9 @@ alt="Beautiful decorated cake">
 
 <div class="card-content">
 
-<h3>Beautiful Cakes</h3>
+<h3>
+Beautiful Cakes
+</h3>
 
 <p>
 Cakes for birthdays, celebrations and special occasions.
@@ -772,7 +959,9 @@ alt="Fresh baked meat pies">
 
 <div class="card-content">
 
-<h3>Meat Pies</h3>
+<h3>
+Meat Pies
+</h3>
 
 <p>
 Deliciously baked meat pies made fresh for you.
@@ -878,8 +1067,9 @@ What Our Customers Say
 </h2>
 
 <p class="review-intro">
-We love hearing from our customers. These are sample reviews
-that can be replaced with genuine customer feedback.
+We love hearing from our customers.
+These are sample reviews that can later
+be replaced with genuine customer feedback.
 </p>
 
 <div class="review-grid">
@@ -940,11 +1130,10 @@ Happy Customer
 
 </div>
 
-
 </div>
 
 
-<div class="review-button">
+<div style="text-align:center;margin-top:35px;">
 
 <a
 class="btn whatsapp"
@@ -1081,6 +1270,103 @@ class="order-button">
 </section>
 
 
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+<div class="section">
+
+<h2 class="section-title">
+Frequently Asked Questions
+</h2>
+
+<div class="faq-list">
+
+
+<details class="faq-item">
+
+<summary>
+What products do you sell?
+</summary>
+
+<p>
+We sell fresh bread, beautiful cakes and delicious meat pies.
+</p>
+
+</details>
+
+
+<details class="faq-item">
+
+<summary>
+How much is your bread?
+</summary>
+
+<p>
+Our bread currently costs ₦1,500.
+</p>
+
+</details>
+
+
+<details class="faq-item">
+
+<summary>
+How much are your cakes?
+</summary>
+
+<p>
+Our cakes start from ₦10,000. Please contact us for specific cake designs and prices.
+</p>
+
+</details>
+
+
+<details class="faq-item">
+
+<summary>
+How can I place an order?
+</summary>
+
+<p>
+You can use any of the Order buttons on this website or fill in the order form. Your order will be sent directly to us through WhatsApp.
+</p>
+
+</details>
+
+
+<details class="faq-item">
+
+<summary>
+What are your opening hours?
+</summary>
+
+<p>
+We are open Monday to Saturday, from 8:00am to 6:00pm.
+</p>
+
+</details>
+
+
+<details class="faq-item">
+
+<summary>
+Where are you located?
+</summary>
+
+<p>
+We are located in Benin City, Nigeria. Our exact shop address can be added when available.
+</p>
+
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- VISIT -->
 
 <section class="visit">
@@ -1096,7 +1382,9 @@ Visit Our Bakery
 
 <div class="info-box">
 
-<h3>📍 Location</h3>
+<h3>
+📍 Location
+</h3>
 
 <p>
 Benin City, Nigeria
@@ -1107,7 +1395,9 @@ Benin City, Nigeria
 
 <div class="info-box">
 
-<h3>🕐 Opening Hours</h3>
+<h3>
+🕐 Opening Hours
+</h3>
 
 <p>
 Monday - Saturday
@@ -1122,14 +1412,15 @@ Monday - Saturday
 
 <div class="info-box">
 
-<h3>📱 WhatsApp</h3>
+<h3>
+📱 WhatsApp
+</h3>
 
 <p>
 +234 703 871 0310
 </p>
 
 </div>
-
 
 </div>
 
@@ -1173,7 +1464,7 @@ Ready To Order?
 </h2>
 
 <p>
-Contact us today for fresh bread, cakes and meat pies.
+Fresh bread, beautiful cakes and delicious meat pies are just a message away.
 </p>
 
 <div class="buttons">
@@ -1214,13 +1505,21 @@ Freshness You Can Taste ❤️
 </p>
 
 <p>
+📍 Benin City, Nigeria
+</p>
+
+<p>
+📱 +234 703 871 0310
+</p>
+
+<p>
 © 2026 Grace Bakery. All Rights Reserved.
 </p>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
+<!-- WHATSAPP -->
 
 <a
 href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20place%20an%20order."
@@ -1229,6 +1528,18 @@ class="floating-whatsapp"
 aria-label="Order on WhatsApp">
 
 💬
+
+</a>
+
+
+<!-- BACK TO TOP -->
+
+<a
+href="#home"
+class="back-top"
+aria-label="Back to top">
+
+↑
 
 </a>
 
@@ -1286,6 +1597,7 @@ message,
 }
 
 </script>
+
 
 </body>
 </html>
