@@ -168,11 +168,6 @@ header{
   text-align:center;
   border-radius:15px;
   box-shadow:0 5px 20px rgba(0,0,0,.07);
-  transition:transform .2s;
-}
-
-.why-card:hover{
-  transform:translateY(-5px);
 }
 
 .why-icon{
@@ -226,10 +221,45 @@ header{
 }
 
 
+/* REVIEWS */
+
+.reviews{
+  background:#fff0d5;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+.review-card{
+  background:white;
+  padding:30px 25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.stars{
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.review-card p{
+  font-style:italic;
+  margin-bottom:15px;
+}
+
+.review-card h4{
+  color:#6f2d16;
+}
+
+
 /* VISIT */
 
 .visit{
-  background:#fff0d5;
+  background:#fffaf4;
   text-align:center;
 }
 
@@ -320,6 +350,7 @@ footer{
       <a href="#about">About</a>
       <a href="#why">Why Us</a>
       <a href="#products">Products</a>
+      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
 
     </div>
@@ -399,33 +430,18 @@ footer{
       <div class="about-highlight">
 
         <div class="highlight">
-
           <h3>🍞 Fresh</h3>
-
-          <p>
-            Freshly prepared products made with care.
-          </p>
-
+          <p>Freshly prepared products made with care.</p>
         </div>
 
         <div class="highlight">
-
           <h3>❤️ Quality</h3>
-
-          <p>
-            We care about taste, quality and satisfaction.
-          </p>
-
+          <p>We care about taste, quality and satisfaction.</p>
         </div>
 
         <div class="highlight">
-
           <h3>😊 Customer First</h3>
-
-          <p>
-            Your satisfaction is important to us.
-          </p>
-
+          <p>Your satisfaction is important to us.</p>
         </div>
 
       </div>
@@ -463,9 +479,7 @@ footer{
 
       <div class="why-card">
 
-        <div class="why-icon">
-          🍞
-        </div>
+        <div class="why-icon">🍞</div>
 
         <h3>
           Fresh Every Day
@@ -481,9 +495,7 @@ footer{
 
       <div class="why-card">
 
-        <div class="why-icon">
-          ⭐
-        </div>
+        <div class="why-icon">⭐</div>
 
         <h3>
           Quality Ingredients
@@ -499,9 +511,7 @@ footer{
 
       <div class="why-card">
 
-        <div class="why-icon">
-          🎂
-        </div>
+        <div class="why-icon">🎂</div>
 
         <h3>
           Beautiful Cakes
@@ -517,9 +527,7 @@ footer{
 
       <div class="why-card">
 
-        <div class="why-icon">
-          ❤️
-        </div>
+        <div class="why-icon">❤️</div>
 
         <h3>
           Made With Care
@@ -621,6 +629,82 @@ footer{
         </div>
 
       </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CUSTOMER REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+  <div class="section">
+
+    <h2 class="section-title">
+      What Our Customers Say
+    </h2>
+
+    <div class="review-grid">
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p>
+          “The bread is so fresh and delicious.
+          I really enjoyed it and will definitely
+          order again!”
+        </p>
+
+        <h4>
+          Happy Customer
+        </h4>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p>
+          “The cake looked beautiful and tasted
+          even better. Everyone at the celebration
+          loved it!”
+        </p>
+
+        <h4>
+          Happy Customer
+        </h4>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p>
+          “Excellent service and very tasty meat pies.
+          I highly recommend Grace Bakery.”
+        </p>
+
+        <h4>
+          Happy Customer
+        </h4>
+
+      </div>
+
 
     </div>
 
@@ -745,4 +829,4 @@ footer{
 
 
 </body>
-</html>
+          </html>
