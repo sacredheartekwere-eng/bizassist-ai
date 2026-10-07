@@ -263,6 +263,13 @@ header{
   background:#fffaf4;
 }
 
+.review-intro{
+  text-align:center;
+  max-width:700px;
+  margin:-15px auto 35px;
+  font-size:16px;
+}
+
 .review-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -289,6 +296,11 @@ header{
 
 .review-card h4{
   color:#6f2d16;
+}
+
+.review-button{
+  text-align:center;
+  margin-top:35px;
 }
 
 /* ORDER */
@@ -455,6 +467,7 @@ footer{
   .map-container iframe{
     height:320px;
   }
+
 }
 </style>
 </head>
@@ -485,6 +498,9 @@ Grace Bakery
 </div>
 
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -517,6 +533,9 @@ Order on WhatsApp
 </div>
 
 </section>
+
+
+<!-- ABOUT -->
 
 <section class="about-us" id="about">
 
@@ -598,6 +617,9 @@ Order With Us
 
 </section>
 
+
+<!-- WHY CHOOSE US -->
+
 <section class="why" id="why">
 
 <div class="section">
@@ -666,6 +688,9 @@ it deserves.
 
 </section>
 
+
+<!-- PRODUCTS -->
+
 <section class="section" id="products">
 
 <h2 class="section-title">
@@ -673,6 +698,7 @@ Our Products
 </h2>
 
 <div class="products">
+
 
 <div class="card">
 
@@ -705,6 +731,7 @@ target="_blank">
 
 </div>
 
+
 <div class="card">
 
 <img
@@ -735,6 +762,7 @@ target="_blank">
 </div>
 
 </div>
+
 
 <div class="card">
 
@@ -770,6 +798,9 @@ target="_blank">
 </div>
 
 </section>
+
+
+<!-- GALLERY -->
 
 <section class="gallery-section" id="gallery">
 
@@ -835,6 +866,9 @@ alt="Fresh bakery cake">
 
 </section>
 
+
+<!-- REVIEWS -->
+
 <section class="reviews" id="reviews">
 
 <div class="section">
@@ -843,7 +877,13 @@ alt="Fresh bakery cake">
 What Our Customers Say
 </h2>
 
+<p class="review-intro">
+We love hearing from our customers. These are sample reviews
+that can be replaced with genuine customer feedback.
+</p>
+
 <div class="review-grid">
+
 
 <div class="review-card">
 
@@ -863,6 +903,7 @@ Happy Customer
 
 </div>
 
+
 <div class="review-card">
 
 <div class="stars">
@@ -881,6 +922,7 @@ Happy Customer
 
 </div>
 
+
 <div class="review-card">
 
 <div class="stars">
@@ -898,11 +940,29 @@ Happy Customer
 
 </div>
 
+
+</div>
+
+
+<div class="review-button">
+
+<a
+class="btn whatsapp"
+href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20leave%20a%20customer%20review."
+target="_blank">
+
+⭐ Leave a Review
+
+</a>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- ORDER -->
 
 <section class="order-section" id="order">
 
@@ -915,6 +975,7 @@ Place Your Order
 <form
 class="order-form"
 onsubmit="sendOrder(event)">
+
 
 <div class="form-group">
 
@@ -930,6 +991,7 @@ required>
 
 </div>
 
+
 <div class="form-group">
 
 <label for="phone">
@@ -943,6 +1005,7 @@ placeholder="Enter your phone number"
 required>
 
 </div>
+
 
 <div class="form-group">
 
@@ -972,6 +1035,7 @@ Meat Pies
 
 </div>
 
+
 <div class="form-group">
 
 <label for="quantity">
@@ -987,6 +1051,7 @@ required>
 
 </div>
 
+
 <div class="form-group">
 
 <label for="details">
@@ -999,6 +1064,7 @@ placeholder="Tell us anything important about your order...">
 </textarea>
 
 </div>
+
 
 <button
 type="submit"
@@ -1014,6 +1080,9 @@ class="order-button">
 
 </section>
 
+
+<!-- VISIT -->
+
 <section class="visit">
 
 <div class="section">
@@ -1024,6 +1093,7 @@ Visit Our Bakery
 
 <div class="info">
 
+
 <div class="info-box">
 
 <h3>📍 Location</h3>
@@ -1033,6 +1103,7 @@ Benin City, Nigeria
 </p>
 
 </div>
+
 
 <div class="info-box">
 
@@ -1048,6 +1119,7 @@ Monday - Saturday
 
 </div>
 
+
 <div class="info-box">
 
 <h3>📱 WhatsApp</h3>
@@ -1058,7 +1130,9 @@ Monday - Saturday
 
 </div>
 
+
 </div>
+
 
 <div class="map-container">
 
@@ -1070,6 +1144,7 @@ referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 
 </div>
+
 
 <div class="buttons">
 
@@ -1087,6 +1162,9 @@ target="_blank">
 </div>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
@@ -1109,6 +1187,7 @@ target="_blank">
 
 </a>
 
+
 <a
 class="btn"
 href="tel:+2347038710310">
@@ -1120,6 +1199,9 @@ href="tel:+2347038710310">
 </div>
 
 </section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -1137,6 +1219,9 @@ Freshness You Can Taste ❤️
 
 </footer>
 
+
+<!-- FLOATING WHATSAPP -->
+
 <a
 href="https://wa.me/2347038710310?text=Hello%20Grace%20Bakery,%20I%20would%20like%20to%20place%20an%20order."
 target="_blank"
@@ -1146,6 +1231,7 @@ aria-label="Order on WhatsApp">
 💬
 
 </a>
+
 
 <script>
 
@@ -1171,6 +1257,7 @@ document.getElementById("details").value;
 const message =
 "Hello Grace Bakery,%0A%0A" +
 "I would like to place an order.%0A%0A" +
+
 "Name: " +
 encodeURIComponent(name) +
 "%0A" +
