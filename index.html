@@ -90,6 +90,8 @@ header{
   font-weight:bold;
   background:#6f2d16;
   color:white;
+  border:none;
+  cursor:pointer;
 }
 
 .btn.whatsapp{
@@ -109,7 +111,7 @@ header{
 }
 
 
-/* ABOUT US */
+/* ABOUT */
 
 .about-us{
   background:#fff0d5;
@@ -150,7 +152,7 @@ header{
 }
 
 
-/* WHY CHOOSE US */
+/* WHY */
 
 .why{
   background:#fffaf4;
@@ -256,6 +258,64 @@ header{
 }
 
 
+/* ORDER FORM */
+
+.order-section{
+  background:#f8ead5;
+}
+
+.order-form{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 6px 25px rgba(0,0,0,.08);
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-group label{
+  display:block;
+  font-weight:bold;
+  margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:16px;
+  font-family:inherit;
+}
+
+.form-group textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.order-button{
+  width:100%;
+  padding:15px;
+  background:#168c45;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.order-button:hover{
+  opacity:.9;
+}
+
+
 /* VISIT */
 
 .visit{
@@ -329,6 +389,10 @@ footer{
     font-size:29px;
   }
 
+  .order-form{
+    padding:22px;
+  }
+
 }
 </style>
 </head>
@@ -351,6 +415,7 @@ footer{
       <a href="#why">Why Us</a>
       <a href="#products">Products</a>
       <a href="#reviews">Reviews</a>
+      <a href="#order">Order</a>
       <a href="#contact">Contact</a>
 
     </div>
@@ -396,7 +461,7 @@ footer{
 </section>
 
 
-<!-- ABOUT US -->
+<!-- ABOUT -->
 
 <section class="about-us" id="about">
 
@@ -637,7 +702,7 @@ footer{
 </section>
 
 
-<!-- CUSTOMER REVIEWS -->
+<!-- REVIEWS -->
 
 <section class="reviews" id="reviews">
 
@@ -707,6 +772,122 @@ footer{
 
 
     </div>
+
+  </div>
+
+</section>
+
+
+<!-- ORDER FORM -->
+
+<section class="order-section" id="order">
+
+  <div class="section">
+
+    <h2 class="section-title">
+      Place Your Order
+    </h2>
+
+    <form class="order-form"
+          onsubmit="sendOrder(event)">
+
+      <div class="form-group">
+
+        <label for="name">
+          Your Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="phone">
+          Phone Number
+        </label>
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          required>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="product">
+          Select Product
+        </label>
+
+        <select id="product" required>
+
+          <option value="">
+            Choose a product
+          </option>
+
+          <option value="Fresh Bread">
+            Fresh Bread - ₦1,500
+          </option>
+
+          <option value="Beautiful Cake">
+            Beautiful Cake - From ₦10,000
+          </option>
+
+          <option value="Meat Pies">
+            Meat Pies
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="quantity">
+          Quantity
+        </label>
+
+        <input
+          type="number"
+          id="quantity"
+          min="1"
+          placeholder="e.g. 2"
+          required>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="details">
+          Order Details
+        </label>
+
+        <textarea
+          id="details"
+          placeholder="Tell us anything important about your order..."></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="order-button">
+
+        💬 Send Order on WhatsApp
+
+      </button>
+
+    </form>
 
   </div>
 
@@ -826,6 +1007,46 @@ footer{
   </p>
 
 </footer>
+
+
+<script>
+
+function sendOrder(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value;
+
+  const phone =
+    document.getElementById("phone").value;
+
+  const product =
+    document.getElementById("product").value;
+
+  const quantity =
+    document.getElementById("quantity").value;
+
+  const details =
+    document.getElementById("details").value;
+
+  const message =
+    "Hello Grace Bakery,%0A%0A" +
+    "I would like to place an order.%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Product: " + encodeURIComponent(product) + "%0A" +
+    "Quantity: " + encodeURIComponent(quantity) + "%0A" +
+    "Order Details: " + encodeURIComponent(details);
+
+  window.open(
+    "https://wa.me/2347038710310?text=" + message,
+    "_blank"
+  );
+
+}
+
+</script>
 
 
 </body>
