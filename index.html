@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BizAssist AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #d1d5db;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #111827;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #response {
+      margin-top: 15px;
+      padding: 15px;
+      background: #f3f4f6;
+      border-radius: 8px;
+      min-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BizAssist AI</h1>
+  <p>Your simple AI assistant for business</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Business Information</h2>
+
+    <input id="businessName" placeholder="Business name">
+
+    <textarea id="businessInfo"
+      placeholder="Tell us about your business, products, services, prices and opening hours"></textarea>
+
+    <button onclick="saveBusiness()">Save Business</button>
+
+    <p id="savedMessage"></p>
+  </div>
+
+  <div class="card">
+    <h2>Customer Assistant</h2>
+
+    <textarea id="question"
+      placeholder="Ask a question about this business..."></textarea>
+
+    <button onclick="answerQuestion()">Ask Assistant</button>
+
+    <div id="response">
+      Your answer will appear here.
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+let businessName = "";
+let businessInfo = "";
+
+function saveBusiness() {
+  businessName = document.getElementById("businessName").value;
+  businessInfo = document.getElementById("businessInfo").value;
+
+  document.getElementById("savedMessage").innerText =
+    "Business information saved successfully!";
+}
+
+function answerQuestion() {
+
+  const question =
+    document.getElementById("question").value.toLowerCase();
+
+  const response =
+    document.getElementById("response");
+
+  if (!businessName || !businessInfo) {
+    response.innerText =
+      "Please enter and save your business information first.";
+    return;
+  }
+
+  if (
+    question.includes("price") ||
+    question.includes("cost") ||
+    question.includes("how much")
+  ) {
+    response.innerText =
+      "Here is the business information about prices: " +
+      businessInfo;
+  }
+
+  else if (
+    question.includes("where") ||
+    question.includes("location") ||
+    question.includes("address")
+  ) {
+    response.innerText =
+      "Please check the business information for the location: " +
+      businessInfo;
+  }
+
+  else if (
+    question.includes("open") ||
+    question.includes("hours")
+  ) {
+    response.innerText =
+      "Here are the business details and opening information: " +
+      businessInfo;
+  }
+
+  else {
+    response.innerText =
+      "Hello! Welcome to " + businessName +
+      ". Based on the information provided: " +
+      businessInfo;
+  }
+}
+
+</script>
+
+</body>
+</html>
